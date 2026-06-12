@@ -12,21 +12,12 @@
 </head>
 <body>
 
-  <!-- logo oficial (símbolo reutilizável) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="pitayaFlame" viewBox="0 0 128 140">
-      <path class="flame-leaf" d="M70 10C92 28 106 50 107 72L93 82l10 8c-2 16-11 26-23 32 8-18 10-38 4-56-5-18-10-38-14-46Z"/>
-      <path class="flame-body" d="M63 6c3 24-5 39-17 51-14 14-22 29-18 45 4 17 20 28 36 28 18 0 32-13 32-31 0-16-10-28-19-42-8-12-13-29-14-51Z"/>
-      <path class="flame-core" d="M59 62c2 12-4 20-8 28-4 9-2 20 8 24 8 3 15-3 15-12 0-8-5-14-8-22-3-7-5-11-7-18Z"/>
-    </symbol>
-  </svg>
-
   <!-- cursor glow -->
   <div class="cursor" id="cursor" aria-hidden="true"></div>
 
   <!-- loader -->
   <div class="loader" id="loader" aria-hidden="true">
-    <svg width="64" height="70"><use href="#pitayaFlame"/></svg>
+    <img src="assets/flame.png" width="60" height="75" alt="" />
   </div>
 
   <!-- animated background -->
@@ -41,7 +32,7 @@
   <header class="nav" id="nav">
     <div class="shell nav__inner">
       <a href="#top" class="brand" aria-label="Pitaya Rocketz">
-        <svg class="brand__mark" width="30" height="33" aria-hidden="true"><use href="#pitayaFlame"/></svg>
+        <img class="brand__mark" src="assets/flame.png" width="28" height="35" alt="" />
         <span class="brand__text"><b>pitaya</b><i>rocketz</i></span>
       </a>
 
@@ -82,21 +73,9 @@
         </div>
       </div>
 
-      <svg class="hero__flame" aria-hidden="true"><use href="#pitayaFlame"/></svg>
-    </div>
-  </section>
-
-  <!-- VÍDEO SHOWCASE -->
-  <section class="showcase" id="filme">
-    <div class="shell">
-      <div class="showcase__frame" id="videoFrame">
-        <video id="brandVideo" src="assets/pitaya-reveal.mp4" poster="assets/poster.jpg"
-               autoplay muted loop playsinline></video>
-        <button class="sound" id="soundBtn" aria-label="Ativar som">
-          <span class="sound__ico">🔇</span><span class="sound__txt">ativar som</span>
-        </button>
-        <div class="showcase__badge">🔥 a marca viva</div>
-      </div>
+      <video class="hero__flame" id="heroFlame" autoplay muted loop playsinline aria-hidden="true">
+        <source src="assets/pitaya-flame.webm" type="video/webm" />
+      </video>
     </div>
   </section>
 
@@ -220,7 +199,7 @@
       </div>
       <div class="who__visual" aria-hidden="true">
         <div class="who__ring"></div>
-        <svg class="who__flame"><use href="#pitayaFlame"/></svg>
+        <img class="who__flame" src="assets/flame.png" alt="" />
       </div>
     </div>
   </section>
@@ -248,7 +227,7 @@
   <footer class="footer">
     <div class="shell footer__top">
       <div class="footer__brand">
-        <svg width="42" height="46" aria-hidden="true"><use href="#pitayaFlame"/></svg>
+        <img src="assets/flame.png" width="42" height="52" alt="" />
         <span class="brand__text brand__text--lg"><b>pitaya</b><i>rocketz</i></span>
         <p>Aceleramos marcas digitais com hype para o varejo físico.</p>
       </div>

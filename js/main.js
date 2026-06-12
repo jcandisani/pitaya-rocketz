@@ -135,6 +135,16 @@
     });
   }
 
+  /* ---------- hero flame: fallback p/ navegadores sem webm alpha ---------- */
+  var heroFlame = document.getElementById('heroFlame');
+  if (heroFlame && !heroFlame.canPlayType('video/webm; codecs="vp9"')) {
+    var fallback = document.createElement('img');
+    fallback.className = 'hero__flame';
+    fallback.src = 'assets/flame.png';
+    fallback.alt = '';
+    heroFlame.replaceWith(fallback);
+  }
+
   /* ---------- hero flame parallax ---------- */
   var flame = document.querySelector('.hero__flame');
   if (flame && !prefersReduced) {
@@ -142,29 +152,6 @@
       var sc = window.scrollY;
       flame.style.transform = 'translateY(' + sc * 0.18 + 'px)';
     }, { passive: true });
-  }
-
-  /* ---------- video showcase: scale on scroll + sound ---------- */
-  var frame = document.getElementById('videoFrame');
-  var video = document.getElementById('brandVideo');
-  if (frame && !prefersReduced) {
-    function scaleFrame() {
-      var r = frame.getBoundingClientRect();
-      var vh = window.innerHeight;
-      var p = Math.min(Math.max((vh - r.top) / (vh * 0.8), 0), 1);
-      frame.style.transform = 'scale(' + (0.93 + 0.07 * p) + ')';
-    }
-    window.addEventListener('scroll', scaleFrame, { passive: true });
-    scaleFrame();
-  }
-  var soundBtn = document.getElementById('soundBtn');
-  if (soundBtn && video) {
-    soundBtn.addEventListener('click', function () {
-      video.muted = !video.muted;
-      soundBtn.querySelector('.sound__ico').textContent = video.muted ? '🔇' : '🔊';
-      soundBtn.querySelector('.sound__txt').textContent = video.muted ? 'ativar som' : 'silenciar';
-      if (!video.muted) { video.currentTime = 0; video.play(); }
-    });
   }
 
   /* ---------- form ---------- */
