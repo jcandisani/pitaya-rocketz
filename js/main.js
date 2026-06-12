@@ -135,18 +135,8 @@
     });
   }
 
-  /* ---------- hero flame: fallback p/ navegadores sem webm alpha ---------- */
-  var heroFlame = document.getElementById('heroFlame');
-  if (heroFlame && !heroFlame.canPlayType('video/webm; codecs="vp9"')) {
-    var fallback = document.createElement('img');
-    fallback.className = 'hero__flame';
-    fallback.src = 'assets/flame-v2.png';
-    fallback.alt = '';
-    heroFlame.replaceWith(fallback);
-  }
-
   /* ---------- hero flame parallax ---------- */
-  var flame = document.querySelector('.hero__flame');
+  var flame = document.querySelector('.hero__media');
   if (flame && !prefersReduced) {
     window.addEventListener('scroll', function () {
       var sc = window.scrollY;
