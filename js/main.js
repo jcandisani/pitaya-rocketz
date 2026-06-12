@@ -144,6 +144,69 @@
     }, { passive: true });
   }
 
+  /* ---------- sparks: raios da marca emitidos pela chama ---------- */
+  var sparksCanvas = document.getElementById('sparksCanvas');
+  if (sparksCanvas && flame && !prefersReduced) {
+    var sctx = sparksCanvas.getContext('2d');
+    var parts = [];
+    var COLORS = ['#FF0A78', '#FF4FA3', '#2BD46A', '#FF0A78'];
+
+    function fitCanvas() {
+      var dpr = window.devicePixelRatio || 1;
+      var r = flame.getBoundingClientRect();
+      sparksCanvas.width = Math.max(r.width, 1) * dpr;
+      sparksCanvas.height = Math.max(r.height, 1) * dpr;
+      sctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    fitCanvas();
+    window.addEventListener('resize', fitCanvas);
+
+    function burst(n) {
+      var r = flame.getBoundingClientRect();
+      var cx = r.width / 2, cy = r.height / 2;
+      for (var i = 0; i < n; i++) {
+        var ang = Math.random() * Math.PI * 2;
+        var sp = 1.4 + Math.random() * 2.4;
+        parts.push({
+          x: cx + Math.cos(ang) * 52, y: cy + Math.sin(ang) * 52,
+          vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp,
+          life: 1, decay: 0.011 + Math.random() * 0.013,
+          size: 7 + Math.random() * 10, ang: ang,
+          color: COLORS[(Math.random() * COLORS.length) | 0]
+        });
+      }
+    }
+    burst(9);
+    setInterval(function () { burst(6 + (Math.random() * 4 | 0)); }, 1600);
+
+    (function tick() {
+      var r = flame.getBoundingClientRect();
+      sctx.clearRect(0, 0, r.width, r.height);
+      for (var i = parts.length - 1; i >= 0; i--) {
+        var p = parts[i];
+        p.x += p.vx; p.y += p.vy;
+        p.vx *= 0.986; p.vy *= 0.986;
+        p.life -= p.decay;
+        if (p.life <= 0) { parts.splice(i, 1); continue; }
+        sctx.save();
+        sctx.globalAlpha = Math.max(p.life, 0);
+        sctx.translate(p.x, p.y);
+        sctx.rotate(p.ang);
+        sctx.fillStyle = p.color;
+        var s = p.size;
+        sctx.beginPath();
+        sctx.moveTo(-s, 0);
+        sctx.lineTo(-s * 0.15, -s * 0.3);
+        sctx.lineTo(s * 0.75, 0);
+        sctx.lineTo(-s * 0.15, s * 0.3);
+        sctx.closePath();
+        sctx.fill();
+        sctx.restore();
+      }
+      requestAnimationFrame(tick);
+    })();
+  }
+
   /* ---------- form ---------- */
   var form = document.getElementById('leadForm');
   var feedback = document.getElementById('formFeedback');
