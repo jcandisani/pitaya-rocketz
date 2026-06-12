@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PITAYA ROCKETZ — Do hype digital à prateleira física</title>
+  <meta name="description" content="A Pitaya acelera marcas digitais com hype para o varejo físico. Estratégia, distribuição e presença de marca no ponto de venda — em ritmo de foguete." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- cursor glow -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <svg viewBox="0 0 64 80" width="60" height="75">
+      <path class="flame-leaf" d="M44 8C30 20 22 30 22 42c0 2 .3 4 .9 6C30 36 38 26 50 18 48 14 46 11 44 8Z"/>
+      <path class="flame-body" d="M37 2c2 12-6 19-14 27C12 40 6 49 6 59c0 12 10 19 22 19s22-7 22-19c0-8-5-15-11-21-3 4-7 6-11 5 7-9 11-21 9-41Z"/>
+    </svg>
+  </div>
+
+  <!-- animated background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__blob bg__blob--1"></div>
+    <div class="bg__blob bg__blob--2"></div>
+    <div class="bg__blob bg__blob--3"></div>
+    <div class="bg__grain"></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="shell nav__inner">
+      <a href="#top" class="brand" aria-label="Pitaya Rocketz">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 64 80" width="30" height="38">
+            <path class="flame-leaf" d="M44 8C30 20 22 30 22 42c0 2 .3 4 .9 6C30 36 38 26 50 18 48 14 46 11 44 8Z"/>
+            <path class="flame-body" d="M37 2c2 12-6 19-14 27C12 40 6 49 6 59c0 12 10 19 22 19s22-7 22-19c0-8-5-15-11-21-3 4-7 6-11 5 7-9 11-21 9-41Z"/>
+          </svg>
+        </span>
+        <span class="brand__text"><b>pitaya</b><i>rocketz</i></span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#manifesto">Manifesto</a>
+        <a href="#fazemos">O que fazemos</a>
+        <a href="#processo">Aceleração</a>
+        <a href="#numeros">Impacto</a>
+        <a href="#contato" class="pill" data-magnetic>Acelerar marca <span>↗</span></a>
+      </nav>
+
+      <button class="burger" id="navToggle" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="shell hero__inner">
+      <div class="hero__tag reveal">
+        <span class="dot"></span> Aceleradora de varejo físico
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line reveal-line"><span>DO <em>HYPE</em></span></span>
+        <span class="line reveal-line"><span>DIGITAL À</span></span>
+        <span class="line reveal-line"><span class="grad">PRATELEIRA.</span></span>
+      </h1>
+
+      <div class="hero__bottom">
+        <p class="hero__lead reveal">
+          Pegamos marcas nativas digitais que já têm desejo e comunidade —
+          e colocamos no <strong>varejo físico</strong>, na loja certa, na frente
+          das pessoas certas. Em ritmo de foguete.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#contato" class="btn btn--solid" data-magnetic>Acelerar minha marca <span>↗</span></a>
+          <a href="#processo" class="btn btn--line" data-magnetic>Ver o processo</a>
+        </div>
+      </div>
+
+      <div class="hero__flame" aria-hidden="true">
+        <svg viewBox="0 0 64 80" class="bigflame">
+          <path class="flame-leaf" d="M44 8C30 20 22 30 22 42c0 2 .3 4 .9 6C30 36 38 26 50 18 48 14 46 11 44 8Z"/>
+          <path class="flame-body" d="M37 2c2 12-6 19-14 27C12 40 6 49 6 59c0 12 10 19 22 19s22-7 22-19c0-8-5-15-11-21-3 4-7 6-11 5 7-9 11-21 9-41Z"/>
+        </svg>
+      </div>
+
+      <div class="scroll-hint reveal"><span></span> role para explorar</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>STREETWEAR</span><b>✦</b><span>BEAUTY</span><b>✦</b><span>FOOD &amp; BEBIDAS</span><b>✦</b>
+      <span>WELLNESS</span><b>✦</b><span>ACESSÓRIOS</span><b>✦</b><span>TECH LIFESTYLE</span><b>✦</b>
+      <span>STREETWEAR</span><b>✦</b><span>BEAUTY</span><b>✦</b><span>FOOD &amp; BEBIDAS</span><b>✦</b>
+      <span>WELLNESS</span><b>✦</b><span>ACESSÓRIOS</span><b>✦</b><span>TECH LIFESTYLE</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- MANIFESTO -->
+  <section class="section manifesto" id="manifesto">
+    <div class="shell">
+      <p class="big-text">
+        <span class="reveal-word">Hype</span> <span class="reveal-word">não</span>
+        <span class="reveal-word">paga</span> <span class="reveal-word">aluguel.</span>
+        <span class="reveal-word grad">Prateleira</span> <span class="reveal-word grad">paga.</span>
+        <span class="reveal-word">Nós</span> <span class="reveal-word">somos</span>
+        <span class="reveal-word">a</span> <span class="reveal-word">ponte</span>
+        <span class="reveal-word">entre</span> <span class="reveal-word">o</span>
+        <span class="reveal-word">desejo</span> <span class="reveal-word">online</span>
+        <span class="reveal-word">e</span> <span class="reveal-word">a</span>
+        <span class="reveal-word">venda</span> <span class="reveal-word">no</span>
+        <span class="reveal-word">balcão.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- O QUE FAZEMOS — bento -->
+  <section class="section" id="fazemos">
+    <div class="shell">
+      <div class="head reveal">
+        <span class="eyebrow">O que fazemos</span>
+        <h2 class="title">Do feed à gôndola, sem perder a essência.</h2>
+      </div>
+
+      <div class="bento">
+        <article class="cell cell--lg reveal" data-tilt>
+          <span class="cell__ico">🚀</span>
+          <h3>Aceleração de varejo</h3>
+          <p>Estrutura completa para tirar a marca da tela e colocar na prateleira — rápido e com padrão.</p>
+          <div class="cell__shine"></div>
+        </article>
+        <article class="cell reveal" data-tilt>
+          <span class="cell__ico">🤝</span>
+          <h3>Distribuição</h3>
+          <p>Negociação com redes e logística até o ponto de venda certo.</p>
+          <div class="cell__shine"></div>
+        </article>
+        <article class="cell reveal" data-tilt>
+          <span class="cell__ico">🎯</span>
+          <h3>Estratégia & PDV</h3>
+          <p>Posicionamento, preço e exposição que convertem no físico.</p>
+          <div class="cell__shine"></div>
+        </article>
+        <article class="cell cell--wide reveal" data-tilt>
+          <span class="cell__ico">📈</span>
+          <h3>Trade marketing & escala</h3>
+          <p>Ativação de ponto de venda e expansão nacional para crescer com consistência.</p>
+          <div class="cell__shine"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="section section--rail" id="processo">
+    <div class="shell">
+      <div class="head reveal">
+        <span class="eyebrow">A aceleração</span>
+        <h2 class="title">4 estágios até a decolagem.</h2>
+      </div>
+
+      <div class="rail">
+        <div class="rail__line" id="railLine"></div>
+        <article class="stage reveal">
+          <span class="stage__num">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Lemos a marca, o hype, o público e o potencial de prateleira.</p>
+        </article>
+        <article class="stage reveal">
+          <span class="stage__num">02</span>
+          <h3>Estratégia</h3>
+          <p>Posicionamento, precificação e plano de canais para o físico.</p>
+        </article>
+        <article class="stage reveal">
+          <span class="stage__num">03</span>
+          <h3>Distribuição</h3>
+          <p>Negociação com redes, logística e presença no PDV certo.</p>
+        </article>
+        <article class="stage reveal">
+          <span class="stage__num">04</span>
+          <h3>Decolagem</h3>
+          <p>Trade marketing, expansão e crescimento sustentável de vendas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="section" id="numeros">
+    <div class="shell stats">
+      <div class="stat reveal"><strong class="num" data-count="120">0</strong><i>+</i><p>pontos de venda ativados</p></div>
+      <div class="stat reveal"><strong class="num" data-count="35">0</strong><i>+</i><p>marcas aceleradas</p></div>
+      <div class="stat reveal"><strong class="num" data-count="6">0</strong><i>x</i><p>crescimento médio no físico</p></div>
+      <div class="stat reveal"><strong class="num" data-count="90">0</strong><i>d</i><p>até a primeira prateleira</p></div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM -->
+  <section class="section">
+    <div class="shell who reveal">
+      <div class="who__copy">
+        <span class="eyebrow">Para marcas</span>
+        <h2 class="title">Sua marca já estourou no digital?</h2>
+        <p class="lead-muted">Comunidade engajada, lançamento que esgota, vive nas redes — mas ainda não está no físico? Esse é o ponto de partida perfeito. A gente acelera essa virada sem você perder o que criou o hype.</p>
+        <a href="#contato" class="btn btn--solid" data-magnetic>Falar com a Pitaya <span>↗</span></a>
+      </div>
+      <div class="who__visual" aria-hidden="true">
+        <div class="who__ring"></div>
+        <svg viewBox="0 0 64 80" class="who__flame">
+          <path class="flame-leaf" d="M44 8C30 20 22 30 22 42c0 2 .3 4 .9 6C30 36 38 26 50 18 48 14 46 11 44 8Z"/>
+          <path class="flame-body" d="M37 2c2 12-6 19-14 27C12 40 6 49 6 59c0 12 10 19 22 19s22-7 22-19c0-8-5-15-11-21-3 4-7 6-11 5 7-9 11-21 9-41Z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contato">
+    <div class="shell cta__inner reveal">
+      <span class="eyebrow eyebrow--light">Bora decolar</span>
+      <h2 class="cta__title">Coloque sua marca <span class="grad">na prateleira.</span></h2>
+      <p class="cta__sub">Conta um pouco sobre a sua marca. A gente responde em ritmo de foguete.</p>
+
+      <form class="form" id="leadForm" novalidate>
+        <div class="form__row">
+          <input type="text" name="marca" placeholder="Nome da marca" required />
+          <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+        </div>
+        <input type="text" name="msg" placeholder="Conta rápido o seu hype 🔥" />
+        <button type="submit" class="btn btn--solid btn--block" data-magnetic>Acelerar minha marca <span>↗</span></button>
+        <p class="form__ok" id="formFeedback" hidden>Recebido! 🚀 A Pitaya entra em contato em breve.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="shell footer__top">
+      <div class="footer__brand">
+        <span class="brand__text brand__text--lg"><b>pitaya</b><i>rocketz</i></span>
+        <p>Aceleramos marcas digitais com hype para o varejo físico.</p>
+      </div>
+      <div class="footer__nav">
+        <div><h4>Navegar</h4><a href="#manifesto">Manifesto</a><a href="#fazemos">O que fazemos</a><a href="#processo">Aceleração</a><a href="#numeros">Impacto</a></div>
+        <div><h4>Contato</h4><a href="#contato">Acelerar marca</a><a href="mailto:contato@pitayarocketz.com">contato@pitayarocketz.com</a></div>
+      </div>
+    </div>
+    <div class="shell footer__bottom">
+      <span>© <span id="year"></span> Pitaya Rocketz</span>
+      <span>Michel Y. Merheje — CEO &amp; Founder</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
