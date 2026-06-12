@@ -137,13 +137,13 @@ svg{ display:block; }
 .hero__actions{ display:flex; gap:14px; flex-wrap:wrap; }
 
 .hero__flame{
-  position:absolute; top:-2%; right:-4%; z-index:-1;
-  width:clamp(300px,40vw,560px); aspect-ratio:640/392;
+  position:absolute; top:-4%; right:-5%; z-index:-1;
+  width:clamp(320px,42vw,600px); aspect-ratio:672/416;
   object-fit:contain; opacity:.96; pointer-events:none;
   filter:drop-shadow(0 30px 70px rgba(255,10,120,.4));
-  /* funde a base do corte do vídeo com o fundo */
-  -webkit-mask-image:linear-gradient(to bottom,#000 82%,transparent 99%);
-  mask-image:linear-gradient(to bottom,#000 82%,transparent 99%);
+  /* funde as bordas do corte do vídeo com o fundo */
+  -webkit-mask-image:radial-gradient(ellipse 78% 85% at 50% 46%,#000 62%,transparent 96%);
+  mask-image:radial-gradient(ellipse 78% 85% at 50% 46%,#000 62%,transparent 96%);
 }
 
 .scroll-hint{ position:absolute; bottom:-30px; left:0; display:flex; align-items:center; gap:10px; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
