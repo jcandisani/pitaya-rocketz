@@ -71,7 +71,7 @@ svg{ display:block; }
    ============================================================ */
 .bg{ position:fixed; inset:0; z-index:-1; overflow:hidden; background:var(--ink); }
 .bg__blob{ position:absolute; border-radius:50%; filter:blur(90px); opacity:.5; }
-.bg__blob--1{ width:50vw; height:50vw; background:var(--pink); top:-12vw; right:-10vw; animation:drift 22s ease-in-out infinite; }
+.bg__blob--1{ width:46vw; height:46vw; background:var(--pink); top:-22vw; right:-18vw; opacity:.34; animation:drift 22s ease-in-out infinite; }
 .bg__blob--2{ width:42vw; height:42vw; background:var(--green); bottom:-14vw; left:-12vw; animation:drift 26s ease-in-out infinite reverse; }
 .bg__blob--3{ width:34vw; height:34vw; background:var(--pink-deep); top:42%; left:46%; opacity:.35; animation:drift 30s ease-in-out infinite; }
 @keyframes drift{ 0%,100%{ transform:translate(0,0) scale(1); } 33%{ transform:translate(6vw,4vw) scale(1.1); } 66%{ transform:translate(-5vw,2vw) scale(.92); } }
