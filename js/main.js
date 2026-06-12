@@ -140,7 +140,7 @@
   if (heroFlame && !heroFlame.canPlayType('video/webm; codecs="vp9"')) {
     var fallback = document.createElement('img');
     fallback.className = 'hero__flame';
-    fallback.src = 'assets/flame.png';
+    fallback.src = 'assets/flame-v2.png';
     fallback.alt = '';
     heroFlame.replaceWith(fallback);
   }
